@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SPS</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_data_collection">DataCollection</string>
+    <string name="cell_guess_s">You are at cell </string>
+    <string name="act_guess_s">You are </string>
+    <string name="initial_belief_s">Initial Belief</string>
+    <string name="locate_me_s">Locate Me</string>
+    <string name="collect_data_s">Collect Data</string>
+    <string name="currCellStats_default">CurrentCell (for stats)</string>
+    <string name="totNumScans">Total Number of \n Scans Collected: </string>
+    <string name="totNumActRec">Total Number of \n Activity Recordings: </string>
+    <string name="actSpec">Activity specific: </string>
+    <string name="scanSpec">Cell specific: </string>
+    <string name="scanStat">Scan Status: </string>
+    <string name="actStat">Activity Status: </string>
+    <string name="statusOk">OK</string>
+    <string name="statusNotOk">NOT OK</string>
+    <string name="scanCount">Scan Count: </string>
+    <string name="actCount">Records Count: </string>
+    <string name="scanningCell">scanningCell</string>
+
+</resources>

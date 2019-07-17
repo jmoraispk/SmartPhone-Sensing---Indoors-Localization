@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#ffffff"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:keepScreenOn="true"
+    android:paddingTop="20dp" >
+
+
+    <TextView
+        android:id="@+id/textBD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Database Controls"
+        android:textSize = "24dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@+id/textBD"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
+
+    <Button
+        android:id="@+id/deleteScanData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete All Scans" />
+    <Button
+        android:id="@+id/deleteActivityData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete All Activity Data" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:layout_below="@+id/layout1"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentRight="true">
+
+        <Button
+            android:id="@+id/deleteLastScan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete Last \n Scan"
+            android:layout_marginBottom="35dp"
+            android:layout_marginTop="10dp"/>
+        <Button
+            android:id="@+id/deleteLastActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete Last \n Activity Recording" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/layout1"
+        android:layout_alignParentLeft="true">
+
+
+    <TextView
+        android:id="@+id/infoScan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/totNumScans"
+        android:textSize = "18dp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        />
+
+    <TextView
+        android:id="@+id/infoScanSpec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/scanSpec"
+        android:textSize = "18dp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        />
+
+    <TextView
+        android:id="@+id/infoActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/totNumActRec"
+        android:textSize = "18dp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        />
+
+    <TextView
+        android:id="@+id/infoActivitySpec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/actSpec"
+        android:textSize = "18dp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        />
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/sep1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_above="@+id/textScans"/>
+
+    <TextView
+        android:id="@+id/textScans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/scanCount"
+        android:textSize = "32dp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/textStatusScan"
+        />
+
+    <TextView
+        android:id="@+id/textStatusScan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/scanStat"
+        android:textSize = "32dp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/layout3"
+        />
+
+
+
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_above="@+id/layout4"
+        android:layout_marginBottom="10dp" >
+
+        <TextView
+            android:id="@+id/textScanningCell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize = "20sp"
+            android:gravity="center"
+            android:text="@string/scanningCell"/>
+
+        <Button
+            android:id="@+id/minusCell"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="- Cell" />
+
+        <Button
+            android:id="@+id/plusCell"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="+ Cell" />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_above="@+id/sep2"
+        android:layout_marginBottom="15dp">
+
+
+        <Button
+            android:id="@+id/buttonScan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="Scan" />
+        <Button
+            android:id="@+id/buttonScanx10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="Scan x10" />
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/sep2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_above="@+id/textActivityCount"/>
+
+    <TextView
+        android:id="@+id/textActivityCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/actCount"
+        android:textSize = "32dp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/linlayoutBottom"
+        />
+
+    <LinearLayout
+        android:id="@+id/linlayoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" >
+        <Spinner
+            android:id="@+id/activity_detection_spin"
+            android:layout_width="200dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Activity to record"
+            >
+
+        </Spinner>
+
+        <Button
+            android:id="@+id/activityRecorderButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Record Activity"
+            android:layout_marginBottom="5dp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

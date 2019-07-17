@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#ffffff"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:keepScreenOn="true"
+    tools:context=".LocateMeActivity">
+
+
+    <ImageView
+        android:id="@+id/canvas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        />
+
+
+    <TextView
+        android:id="@+id/cell_guess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your current cell is *cell*"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/act_guess"
+        />
+
+    <TextView
+        android:id="@+id/act_guess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your current activity is *activity*"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/localization_algorithm_spin"
+        />
+
+    <CheckBox android:id="@+id/checkbox_detailed_sensor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Graphs"
+        android:onClick="onCheckboxClicked"
+        android:layout_above="@+id/checkbox_sticky_angles"
+        android:layout_marginBottom="15dp"/>
+
+    <CheckBox android:id="@+id/checkbox_sticky_angles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="StickySensors"
+        android:onClick="onStickyCheckboxClicked"
+        android:layout_above="@+id/cell_guess"
+        />
+
+    <Spinner
+        android:id="@+id/localization_algorithm_spin"
+        android:layout_width="200dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/activity_detection_spin"
+        android:layout_toRightOf="@id/activity_detection_spin"
+        android:layout_toEndOf="@id/activity_detection_spin"
+        >
+
+    </Spinner>
+
+    <Spinner
+        android:id="@+id/activity_detection_spin"
+        android:layout_width="200dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/currCell"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        >
+
+    </Spinner>
+
+    <EditText
+        android:id="@+id/currCell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="@string/currCellStats_default"
+        android:textSize="20sp"
+        android:layout_above="@id/btn_locate_me"
+        android:layout_marginBottom="5dp"/>
+
+
+    <Button
+        android:id="@+id/btn_initial_belief"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:layout_toLeftOf="@+id/btn_locate_me"
+        android:text="@string/initial_belief_s" />
+
+    <Button
+        android:id="@+id/btn_collect_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_locate_me"
+        android:layout_toRightOf="@+id/btn_locate_me"
+        android:text="@string/collect_data_s" />
+
+    <Button
+        android:id="@+id/btn_locate_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/locate_me_s"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"/>
+
+</RelativeLayout>
